@@ -5,6 +5,7 @@
 #define FILE_DIDNT_OPEN_ERROR (-1)
 #define MAX_LINE (1024)
 #define MAX_FILE_NAME (256) 
+#define MAX_BODOVI (90)
 
 int countStudentsFromFile(char* filename)
 {
@@ -31,6 +32,19 @@ int countStudentsFromFile(char* filename)
     fclose(fp);
     return count;
 }
+
+void Printing(stud* studenti,int number_of_students)
+{
+    int j = 0;
+    
+ while(j<number_of_students)
+    {
+        printf("\nName and Surname : %s %s, Apsolute points : %d, Relative points : %f", studenti[j].name, studenti[j].surname, studenti[j].points, (((float)studenti[j].points)/MAX_BODOVI)*100);
+        j++;
+    }
+
+}
+
 void memoryalloc (char* filename, stud* studenti, int number_of_students)
 {
     FILE* fp = NULL;
