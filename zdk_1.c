@@ -6,20 +6,6 @@
 #define MAX_LINE (1024)
 #define MAX_FILE_NAME (256) 
 
-int countStudentsFromFile(char* filename);
-
-int main(void)
-{
-    char filename[MAX_FILE_NAME] = {0};/*karlo dobro je
-
-    printf("Insert filename > ");
-    scanf(" %s", filename);
-
-    printf("Broj studenata u datoteci %s je %d", filename, countStudentsFromFile(filename));
-
-    return 0;
-}
-
 int countStudentsFromFile(char* filename)
 {
     FILE* fp = NULL;
@@ -45,3 +31,46 @@ int countStudentsFromFile(char* filename)
     fclose(fp);
     return count;
 }
+void memoryalloc (char* filename, stud* studenti, int number_of_students)
+{
+    FILE* fp = NULL;
+    fp = fopen(filename, "r");
+    int i=0;
+
+    if (fp == NULL)
+    {
+        printf("Dear customer, the file %s didn't open!\r\n",filename);
+    }
+    
+    studenti=malloc(countStudentsFromFile(filename)*sizeof(stud)); 
+    
+    while(!feof(fp))
+    {
+    
+            fscanf (fp, " %s %s %d", studenti[i].name, studenti[i].surname, &studenti[i].points);
+            i++;
+    }
+    Printing(studenti,countStudentsFromFile(filename));
+    fclose(fp);
+    free(studenti);
+
+}
+int main(void)
+{
+    char filename[MAX_FILE_NAME] = {0};
+    stud* studenti=NULL;
+    int number_of_students=0;
+    
+    printf("Insert filename > ");
+    scanf(" %s", filename);
+
+   
+    number_of_students=countStudentsFromFile(filename);
+
+    printf("Broj studenata u datoteci %s je %d", filename, countStudentsFromFile(filename));
+    memoryalloc(filename, studenti, number_of_students);
+    
+    return 0;
+}
+
+
