@@ -6,6 +6,12 @@
 #define MAX_LINE (1024)
 #define MAX_FILE_NAME (256) 
 #define MAX_BODOVI (90)
+typedef struct student 
+{
+    char name[MAX_LINE];
+    char surname[MAX_LINE];
+    int points;
+}stud;
 
 int countStudentsFromFile(char* filename)
 {
