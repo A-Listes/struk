@@ -10,7 +10,7 @@ int countStudentsFromFile(char* filename);
 
 int main(void)
 {
-    char filename[MAX_FILE_NAME] = {0};
+    char filename[MAX_FILE_NAME] = {0};/*karlo dobro je
 
     printf("Insert filename > ");
     scanf(" %s", filename);
