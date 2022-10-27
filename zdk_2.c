@@ -173,7 +173,7 @@ int main()
 
     do
     {
-        printf("\nUpisite: \n'1' za unos na pocetak \n'2' za unos na kraj\n'3' za trazenje po prezimenu\n'4' za brisanje elementa\n'0' za ispis\n");
+        printf("\nUpisite: \n'1' za unos na pocetak \n'2' za unos na kraj\n'3' za trazenje po prezimenu\n'4' za brisanje elementa\n'0' za ispis\n'5' za izlaz\n");
         scanf("%d", &n);
     if (n==1)
     {
@@ -209,9 +209,14 @@ int main()
         Isprintaj(P);
     }
 
+    else if(n==5)
+    {
+        break;
+    }
+
     else 
         printf("\nKrivi unos!\n");
-    } while (n!=0);
+    } while (n!=5);
     
       
     return 0;
