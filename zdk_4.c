@@ -317,6 +317,7 @@ int main()
     CleanUp(P2);
     CleanUp(P3);
     CleanUp(P4);
+    fclose(fp);
 
     return 0;
 }
