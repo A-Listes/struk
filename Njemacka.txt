@@ -1,0 +1,5 @@
+Berlin		4149635
+Hamburg		1958822
+Koln		1188667
+Munchen		1747123
+Frankfurt 	895304

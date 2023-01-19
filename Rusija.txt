@@ -1,0 +1,5 @@
+Moskva		12795570
+Sankt-Peterburg 5733144
+Samara		1183327
+Novosibirsk	1728869
+Ekaterinburg	1562823
