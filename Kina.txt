@@ -1,5 +1,0 @@
-Peking		30217789
-Guangzhou	15194861
-Sangaj		31913884
-Wuhan		8648386
-Tianjin		14057814
